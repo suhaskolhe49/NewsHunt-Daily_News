@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import PropTypes from 'prop-types'
+import { Link } from "react-router-dom";
 
 export class NavBar extends Component {
   render() {
@@ -7,9 +7,9 @@ export class NavBar extends Component {
       <div>
         <nav className="navbar navbar-expand-lg bg-body-">
           <div className="container-fluid">
-            <a className="navbar-brand" href="#">
-              NewsMonkey
-            </a>
+            <Link className="navbar-brand" to="#">
+              NewsHunt
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -26,30 +26,13 @@ export class NavBar extends Component {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                  <a className="nav-link" aria-current="page" href="#">
-                    Home
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    About
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Business</a></li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Entertainment</a></li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">General</a></li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Health</a></li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Science</a></li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Sports</a></li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Technology</a></li>
+                <li className="nav-item"><Link className="nav-link" aria-current="page" to="/general">Home</Link></li>
+                <li className="nav-item"><Link className="nav-link" to="/business">Business</Link></li>
+                <li className="nav-item"><Link className="nav-link" to="/entertainment">Entertainment</Link></li>
+                <li className="nav-item"><Link className="nav-link" to="/health">Health</Link></li>
+                <li className="nav-item"><Link className="nav-link" to="/science">Science</Link></li>
+                <li className="nav-item"><Link className="nav-link" to="/sports">Sports</Link></li>
+                <li className="nav-item"><Link className="nav-link" to="/technology">Technology</Link></li>
               </ul>
             </div>
           </div>

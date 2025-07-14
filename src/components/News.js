@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import NewsItem from "./NewsItem";
 import Spinner from "./Spinner";
 import PropTypes from 'prop-types';
-import '../api/news'
-
-
 
 export class News extends Component {
   static defaultProps={
@@ -27,7 +24,7 @@ export class News extends Component {
     };
   }
   async componentDidMount() {
-    let url = '/api/news';
+    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=b917545750294c8cbdbf2772b2e659b2&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`;
     let data = await fetch(url);
     let parsedData = await data.json()
     console.log(parsedData);
